@@ -1,0 +1,35 @@
+.container{
+    width:100%;
+    padding:2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:10px;
+    line-height: 1;
+    & .heading{
+        line-height: 0;
+    }
+    & .qoute{
+        line-height: 1.2;
+    }
+    & .content {
+        width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+        margin-top:50px;
+    }
+    & .btn{ 
+        display: flex;
+        gap:10px;
+    }
+}
+
+.circle{
+    overflow: hidden;
+    border-radius:50%;
+    width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
