@@ -3,7 +3,7 @@ import { GoProjectRoadmap } from "react-icons/go";
 import { MdContactPage } from "react-icons/md";
 import { GiBrain } from "react-icons/gi";
 import style from "./Menu.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Menu = () => {
   const [active, setActive] = useState({
@@ -12,6 +12,63 @@ const Menu = () => {
     contact: false,
     skill:false,
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeElement = document.getElementById("home");
+      // const projectElement = document.getElementById("project");
+      // const contactElement = document.getElementById("contact");
+      const skillElement = document.getElementById("skill") 
+      
+      const scrollPosition = window.scrollY;
+
+      if (
+        homeElement &&
+        scrollPosition >= homeElement?.offsetTop &&
+        scrollPosition < skillElement?.offsetTop /2
+      ) {
+        setActive({
+          home: true,
+          project: false,
+          contact: false,
+          skill:false,
+        });
+      } else if (
+        skillElement &&
+        scrollPosition >= skillElement.offsetTop /2
+      ) {
+        setActive({
+          home: false,
+          project: false,
+          contact: false,
+          skill:true,
+        });
+      } 
+      // else if (projectElement && scrollPosition >= projectElement.offsetTop && contactElement.offsetTop) {
+      //   setActive({
+      //     home: false,
+      //     project: true,
+      //     contact: false,
+      //     skill:false,
+      //   });  
+      // }
+      // else if(contactElement && scrollPosition >= contactElement.offsetTop){
+      //   setActive({
+      //     home: false,
+      //     project: true,
+      //     contact: false,
+      //     skill:false,
+      //   });  
+      // }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function handleChange(value) {
     setActive((prevActive) => {
