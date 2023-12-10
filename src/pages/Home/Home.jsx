@@ -1,4 +1,4 @@
-import Clock from "../../components/clock/Clock";
+import Clock from "../../components/Clock/Clock";
 import Imganimation from "../Imganimation/Imganimation";
 import style from "./Home.module.css";
 const Home = () => {
