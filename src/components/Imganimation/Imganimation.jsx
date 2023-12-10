@@ -76,7 +76,7 @@ const Imganimation = ({ text, speed ,singleline }) => {
 
       const lines = originalText.split("\n");
       const change = setInterval(() => {
-        if (!text) {
+        if (!singleline) {
           ascii.current.innerHTML = lines
             .map((line) =>
               line
@@ -117,10 +117,21 @@ const Imganimation = ({ text, speed ,singleline }) => {
       }, speed);
     };
 
-    runEffectAnimation();
+    // runEffectAnimation();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          runEffectAnimation()
+          observer.unobserve(ascii.current);
+        }
+      });
+    }, {threshold:0.5});
+
+    observer.observe(ascii.current);
 
     // Cleanup function to clear the interval when the component is unmounted
     return () => {
+      observer.disconnect()
       clearInterval();
     }
   }, [speed, text]);

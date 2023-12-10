@@ -2,6 +2,6 @@
 
 #root {
   height:100dvh;
-  display: flex;
+  font-family: 'IBM Plex Mono', monospace;
 }
 

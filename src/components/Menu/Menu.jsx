@@ -1,13 +1,16 @@
 import { IoHomeSharp } from "react-icons/io5";
 import { GoProjectRoadmap } from "react-icons/go";
 import { MdContactPage } from "react-icons/md";
+import { GiBrain } from "react-icons/gi";
 import style from "./Menu.module.css";
 import { useState } from "react";
+
 const Menu = () => {
   const [active, setActive] = useState({
     home: true,
     project: false,
     contact: false,
+    skill:false,
   });
 
   function handleChange(value) {
@@ -24,6 +27,11 @@ const Menu = () => {
   
       return newActive;
     });
+
+    const element = document.getElementById(value);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   return (
@@ -35,6 +43,13 @@ const Menu = () => {
           onClick={() => handleChange("home")}
         >
           <IoHomeSharp />
+        </li>
+        <li
+          title="contact"
+          className={active.skill ? style.active : ""}
+          onClick={() => handleChange("skill")}
+        >
+          <GiBrain />
         </li>
         <li
           title="Projects"
