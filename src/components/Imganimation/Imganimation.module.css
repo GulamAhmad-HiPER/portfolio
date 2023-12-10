@@ -6,7 +6,7 @@
   position: relative;
   cursor: pointer;
 }
-.asciiimg::before{
+/* .asciiimg::before{
   content: '';
   position: absolute;
   top: 0;
@@ -17,4 +17,4 @@
   background-size: cover;
   background-repeat:no-repeat;
   z-index: 1;
-}
+} */

@@ -63,19 +63,6 @@ const Imganimation = ({ text, speed ,singleline }) => {
 
   useEffect(() => {
     let isRunning = false;
-    const handleMouseMove = (event) => {
-      const mouseX = event.clientX - ascii.current.getBoundingClientRect().left;
-      const percentage = (mouseX / ascii.current.clientWidth) * 100;
-      ascii.current.style.setProperty('--reveal-width', percentage + '%');
-    };
-
-    const handleMouseLeave = () => {
-      ascii.current.style.setProperty('--reveal-width', '0%');
-    };
-
-    // Add event listeners
-    ascii.current.addEventListener('mousemove', handleMouseMove);
-    ascii.current.addEventListener('mouseleave', handleMouseLeave);
 
   
     const runEffectAnimation = () => {
@@ -134,8 +121,6 @@ const Imganimation = ({ text, speed ,singleline }) => {
 
     // Cleanup function to clear the interval when the component is unmounted
     return () => {
-      ascii.current.removeEventListener('mousemove', handleMouseMove);
-      ascii.current.removeEventListener('mouseleave', handleMouseLeave);
       clearInterval();
     }
   }, [speed, text]);

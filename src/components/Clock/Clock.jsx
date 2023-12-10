@@ -12,7 +12,9 @@ const Clock = () => {
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
-  return <div className={style.clock}>{time}</div>;
+  return <div className={style.clock}>
+    {time}
+  </div>;
 };
 
 export default Clock;

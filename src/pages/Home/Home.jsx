@@ -1,5 +1,5 @@
 import Clock from "../../components/Clock/Clock";
-import Imganimation from "../Imganimation/Imganimation";
+import Imganimation from "../../components/Imganimation/Imganimation";
 import style from "./Home.module.css";
 const Home = () => {
   return (
