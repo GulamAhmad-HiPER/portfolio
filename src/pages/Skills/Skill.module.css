@@ -10,15 +10,17 @@
   gap: 10px;
   & > div {
     min-width: 300px;
-    max-width: 600px;
     flex: 1 0 0;
   }
 }
-
+.skill_container {
+  max-width: 600px;
+}
 .skill_view {
   /* margin-left: 10px; */
   font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   position: relative;

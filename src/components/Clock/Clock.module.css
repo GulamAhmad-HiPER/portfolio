@@ -1,8 +1,8 @@
-.clock{
-    position: absolute;
-    top: 30px;
-    left:30px;
-    font-size: 1.4rem;
-    font-family: 'Silkscreen', sans-serif;
-    margin-bottom: 50px;
+.clock {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+  font-size: 1.4rem;
+  font-family: "Silkscreen", sans-serif;
+  margin-bottom: 50px;
 }

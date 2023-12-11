@@ -11,24 +11,26 @@ import CounterAnimation from "../../components/Counter/CounterAnimation";
 const Skill = () => {
   return (
     <section id="skill" className={style.skill}>
-      <div className={style.skill_container}>
-        <h1 className="primary-fs">
-          <Imganimation
-            text="Skills & Expertise"
-            singleline={true}
-            speed={30}
-          />
-        </h1>
-        <p>
-          Main area of experties is Frontend Development.
-          <br />
-          <br />
-          HTML , CSS , JS ,building small and medium webapps using React Js,
-          custom layouts and other featuers.
-          <br />
-          <br /> I have also Full Stack developer experience with my one
-          freelance project.
-        </p>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className={style.skill_container}>
+          <h1 className="primary-fs">
+            <Imganimation
+              text="Skills & Expertise"
+              singleline={true}
+              speed={30}
+            />
+          </h1>
+          <p>
+            Main area of experties is Frontend Development.
+            <br />
+            <br />
+            HTML , CSS , JS ,building small and medium webapps using React Js,
+            custom layouts and other featuers.
+            <br />
+            <br /> I have also Full Stack developer experience with my one
+            freelance project.
+          </p>
+        </div>
       </div>
       <div className={style.skill_view}>
         <div>

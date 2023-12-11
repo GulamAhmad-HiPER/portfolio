@@ -1,39 +1,39 @@
-.container{
-    height: 100%;
-    padding: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
-    font-family: 'IBM Plex Mono', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap:10px;
-    box-sizing:border-box;
-    line-height: 1;
-    & > div{
-        width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
-    }
-    & .heading{
-        line-height: 0;
-    }
-    & .qoute{
-        line-height: 1.2;
-    }
-    & .content {
-        margin-top:50px;
-    }
+.container {
+  height: 100%;
+  padding: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-sizing: border-box;
+  line-height: 1;
+  & > div {
+    width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+  }
+  & .heading {
+    line-height: 0;
+  }
+  & .qoute {
+    line-height: 1.2;
+  }
+  & .content {
+    margin-top: 50px;
+  }
 
-    & .btn{ 
-        display: flex;
-        gap:10px;
-    }
+  & .btn {
+    display: flex;
+    gap: 10px;
+  }
 }
 
-.circle{
-    overflow: hidden;
-    border-radius:50%;
-    width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
-    aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.circle {
+  overflow: hidden;
+  border-radius: 50%;
+  width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
