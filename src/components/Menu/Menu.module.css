@@ -7,7 +7,6 @@
   border-radius: 50px;
   background-color: #222222;
   box-shadow: 5px 5px 9px #181818, -5px -5px 9px #2c2c2c;
-  
   & ul {
     display: flex;
     list-style: none;
@@ -24,7 +23,7 @@
       cursor: pointer;
       &.active {
         box-shadow: inset 4px 4px 8px #1d1d1d, inset -4px -4px 8px #272727;
-        color:burlywood;
+        color: burlywood;
       }
     }
   }

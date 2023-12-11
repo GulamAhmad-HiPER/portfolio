@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import style from "./Imganimation.module.css";
 
-const Imganimation = ({ text, speed ,singleline }) => {
+const Imganimation = ({ text, speed, singleline, hover }) => {
   const ascii = useRef();
   const asciiText =
     text ||
@@ -59,12 +59,11 @@ const Imganimation = ({ text, speed ,singleline }) => {
 
 `;
   const symbol = ".,:;*%S+?#@";
-  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   useEffect(() => {
     let isRunning = false;
 
-  
     const runEffectAnimation = () => {
       if (isRunning) {
         return;
@@ -95,7 +94,7 @@ const Imganimation = ({ text, speed ,singleline }) => {
             isRunning = false;
             clearInterval(change);
           }
-        iteration += 1;
+          iteration += 1;
         } else {
           ascii.current.innerHTML = originalText
             .split("")
@@ -111,35 +110,41 @@ const Imganimation = ({ text, speed ,singleline }) => {
             isRunning = false;
             clearInterval(change);
           }
-        iteration += 1/4;
-
+          iteration += 1 / 4;
         }
       }, speed);
     };
 
     // runEffectAnimation();
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          runEffectAnimation()
-          observer.unobserve(ascii.current);
-        }
-      });
-    }, {threshold:0.5});
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runEffectAnimation();
+            observer.unobserve(ascii.current);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
     observer.observe(ascii.current);
 
+    if (hover) {
+      ascii.current.addEventListener("mouseover", () => runEffectAnimation());
+    }
+
     // Cleanup function to clear the interval when the component is unmounted
     return () => {
-      observer.disconnect()
+      observer.disconnect();
       clearInterval();
-    }
+    };
   }, [speed, text]);
   return (
     <>
       <span
         ref={ascii}
-        className={ singleline ? style.singleline : style.asciiimg}
+        className={singleline ? style.singleline : style.asciiimg}
         dangerouslySetInnerHTML={{ __html: "" }}
       ></span>
     </>

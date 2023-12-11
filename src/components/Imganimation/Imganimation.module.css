@@ -6,6 +6,10 @@
   position: relative;
   cursor: pointer;
 }
+.asciiimg,
+.singleline {
+  user-select: none;
+}
 /* .asciiimg::before{
   content: '';
   position: absolute;

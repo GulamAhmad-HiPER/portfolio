@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <section id="home" className={style.container}>
       <div className={style.content}>
-        <p className={style.timer}>
-          <Clock/>
-        </p>
+        <div className={style.timer}>
+          <Clock />
+        </div>
         <p className={`primary-fs ${style.heading}`}>
           <Imganimation text="GULAM AHMAD" speed={50} singleline={true} />
         </p>

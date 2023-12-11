@@ -10,55 +10,58 @@ const Menu = () => {
     home: true,
     project: false,
     contact: false,
-    skill:false,
+    skill: false,
   });
 
   useEffect(() => {
     const handleScroll = () => {
       const homeElement = document.getElementById("home");
-      // const projectElement = document.getElementById("project");
+      const projectElement = document.getElementById("project");
       // const contactElement = document.getElementById("contact");
-      const skillElement = document.getElementById("skill") 
-      
+      const skillElement = document.getElementById("skill");
+
       const scrollPosition = window.scrollY;
 
       if (
         homeElement &&
         scrollPosition >= homeElement?.offsetTop &&
-        scrollPosition < skillElement?.offsetTop /2
+        scrollPosition < skillElement?.offsetTop / 1.2
       ) {
         setActive({
           home: true,
           project: false,
           contact: false,
-          skill:false,
+          skill: false,
         });
       } else if (
         skillElement &&
-        scrollPosition >= skillElement.offsetTop /2
+        scrollPosition >= skillElement?.offsetTop / 1.2 &&
+        scrollPosition < projectElement?.offsetTop / 1.2
       ) {
         setActive({
           home: false,
           project: false,
           contact: false,
-          skill:true,
+          skill: true,
         });
-      } 
-      // else if (projectElement && scrollPosition >= projectElement.offsetTop && contactElement.offsetTop) {
-      //   setActive({
-      //     home: false,
-      //     project: true,
-      //     contact: false,
-      //     skill:false,
-      //   });  
-      // }
+      } else if (
+        projectElement &&
+        scrollPosition >= projectElement.offsetTop / 1.2
+      ) {
+        setActive({
+          home: false,
+          project: true,
+          contact: false,
+          skill: false,
+        });
+      }
       // else if(contactElement && scrollPosition >= contactElement.offsetTop){
       //   setActive({
       //     home: false,
       //     project: true,
       //     contact: false,
       //     skill:false,
-      //   });  
+      //   });
       // }
     };
 
@@ -73,15 +76,15 @@ const Menu = () => {
   function handleChange(value) {
     setActive((prevActive) => {
       const newActive = { ...prevActive };
-  
+
       // Set all values to false
-      Object.keys(newActive).forEach(key => {
+      Object.keys(newActive).forEach((key) => {
         newActive[key] = false;
       });
-  
+
       // Set the clicked value to true
       newActive[value] = true;
-  
+
       return newActive;
     });
 

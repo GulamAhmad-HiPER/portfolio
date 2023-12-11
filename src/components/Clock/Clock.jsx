@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import style from "./Clock.module.css"
+import style from "./Clock.module.css";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
@@ -12,9 +12,7 @@ const Clock = () => {
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
-  return <div className={style.clock}>
-    {time}
-  </div>;
+  return <span className={style.clock}>{time}</span>;
 };
 
 export default Clock;

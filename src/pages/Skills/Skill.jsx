@@ -31,32 +31,32 @@ const Skill = () => {
         </p>
       </div>
       <div className={style.skill_view}>
-        <p>
+        <div>
           <FaReact></FaReact>
           <CounterAnimation start={0} end={80} duration={1500} />
-        </p>
-        <p>
+        </div>
+        <div>
           <FaNodeJs></FaNodeJs>
           <CounterAnimation start={0} end={80} duration={1500} />
-        </p>
-        <p>
+        </div>
+        <div>
           <SiRedux></SiRedux>
           <CounterAnimation start={0} end={70} duration={1500} />
-        </p>
+        </div>
 
-        <p>
+        <div>
           <SiExpress></SiExpress>
           <CounterAnimation start={0} end={70} duration={1500} />
-        </p>
-        <p>
+        </div>
+        <div>
           <SiMysql></SiMysql>
           <CounterAnimation start={0} end={90} duration={1500} />
-        </p>
+        </div>
 
-        <p>
+        <div>
           <SiDjango></SiDjango>
           <CounterAnimation start={0} end={60} duration={1500} />
-        </p>
+        </div>
       </div>
     </section>
   );
