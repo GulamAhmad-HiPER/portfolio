@@ -7,7 +7,11 @@
     align-items: center;
     flex-wrap: wrap;
     gap:10px;
+    box-sizing:border-box;
     line-height: 1;
+    & > div{
+        width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
+    }
     & .heading{
         line-height: 0;
     }
@@ -15,9 +19,9 @@
         line-height: 1.2;
     }
     & .content {
-        width: clamp(18.75rem, 15.1786rem + 17.8571vw, 31.25rem);
         margin-top:50px;
     }
+
     & .btn{ 
         display: flex;
         gap:10px;

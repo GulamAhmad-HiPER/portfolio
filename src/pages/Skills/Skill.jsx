@@ -11,7 +11,7 @@ import CounterAnimation from "../../components/Counter/CounterAnimation";
 const Skill = () => {
   return (
     <section id="skill" className={style.skill}>
-      <div className={`  ${style.skill_container}`}>
+      <div className={style.skill_container}>
         <h1 className="primary-fs">
           <Imganimation
             text="Skills & Expertise"
