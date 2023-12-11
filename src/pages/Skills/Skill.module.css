@@ -16,46 +16,19 @@
 }
 .skill_container {
   padding: 1rem;
-  position: relative;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  &::after {
-    content: "";
-    position: absolute;
-    right: -10px;
-    top: 20px;
-    width: 1px;
-    height: 90%;
-    background-color: white;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    margin: 0 auto;
-    bottom: -10px;
-    width: 95%;
-    height: 1px;
-    background-color: white;
-  }
 }
 
 .skill_view {
   margin-left: 20px;
   font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  & > div {
+  flex-wrap: wrap;
+  gap:20px;
+  position: relative;
+  & p{
     display: flex;
-    justify-content: space-evenly;
-    gap:10px;
-    & p {
-      border: 1px solid;
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      border-radius: 10px;
-    }
+    gap:5px;
+    align-items: center;
   }
 }
 

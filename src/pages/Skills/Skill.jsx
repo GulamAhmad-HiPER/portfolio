@@ -31,37 +31,32 @@ const Skill = () => {
         </p>
       </div>
       <div className={style.skill_view}>
-        <div>
-          <p>
-            <FaReact></FaReact>&nbsp;
-            <CounterAnimation start={0} end={80} duration={1500}/>%
-          </p>
-          <p>
-            <FaNodeJs></FaNodeJs>&nbsp;
-            <CounterAnimation start={0} end={80} duration={1500}/>%
+        <p>
+          <FaReact></FaReact>
+          <CounterAnimation start={0} end={80} duration={1500} />
+        </p>
+        <p>
+          <FaNodeJs></FaNodeJs>
+          <CounterAnimation start={0} end={80} duration={1500} />
+        </p>
+        <p>
+          <SiRedux></SiRedux>
+          <CounterAnimation start={0} end={70} duration={1500} />
+        </p>
 
-          </p>
-          <p>
-            <SiRedux></SiRedux>&nbsp;
-            <CounterAnimation start={0} end={70} duration={1500}/>% 
-          </p>
-        </div>
-        <div>
-          <p>
-            <SiExpress></SiExpress>&nbsp;
-            <CounterAnimation start={0} end={70} duration={1500}/>%
-          </p>
-          <p>
-            <SiMysql></SiMysql>&nbsp;
-            <CounterAnimation start={0} end={90} duration={1500}/>%
-          </p>
-        </div>
-        <div>
-          <p>
-            <SiDjango></SiDjango>&nbsp;
-            <CounterAnimation start={0} end={60} duration={1500}/>%
-          </p>
-        </div>
+        <p>
+          <SiExpress></SiExpress>
+          <CounterAnimation start={0} end={70} duration={1500} />
+        </p>
+        <p>
+          <SiMysql></SiMysql>
+          <CounterAnimation start={0} end={90} duration={1500} />
+        </p>
+
+        <p>
+          <SiDjango></SiDjango>
+          <CounterAnimation start={0} end={60} duration={1500} />
+        </p>
       </div>
     </section>
   );

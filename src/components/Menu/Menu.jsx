@@ -25,7 +25,7 @@ const Menu = () => {
       if (
         homeElement &&
         scrollPosition >= homeElement?.offsetTop &&
-        scrollPosition < skillElement?.offsetTop /2
+        scrollPosition < skillElement?.offsetTop 
       ) {
         setActive({
           home: true,
@@ -35,7 +35,7 @@ const Menu = () => {
         });
       } else if (
         skillElement &&
-        scrollPosition >= skillElement.offsetTop /2
+        scrollPosition >= skillElement.offsetTop 
       ) {
         setActive({
           home: false,
