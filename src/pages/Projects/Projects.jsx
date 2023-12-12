@@ -80,13 +80,25 @@ const Projects = () => {
           image={img1}
           name="philomatheon"
           highlighted={hoveredItem === 0}
+          link="https://philomathean.netlify.app/"
         />
-        <Card image={img4} name="Wheater app" highlighted={hoveredItem === 3} />
-        <Card image={img2} name="HTML Editor" highlighted={hoveredItem === 1} />
+        <Card
+          image={img4}
+          name="Wheater app"
+          highlighted={hoveredItem === 3}
+          link="https://weather5daysapp.netlify.app/"
+        />
+        <Card
+          image={img2}
+          name="HTML Editor"
+          highlighted={hoveredItem === 1}
+          link="https://gulamahmad.github.io/HTMLEditor.github.io/"
+        />
         <Card
           image={img3}
           name="Task Manager"
           highlighted={hoveredItem === 2}
+          link="https://taskmanagertodoreact.netlify.app/"
         />
       </div>
     </section>

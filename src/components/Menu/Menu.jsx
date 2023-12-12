@@ -17,7 +17,7 @@ const Menu = () => {
     const handleScroll = () => {
       const homeElement = document.getElementById("home");
       const projectElement = document.getElementById("project");
-      // const contactElement = document.getElementById("contact");
+      const contactElement = document.getElementById("contact");
       const skillElement = document.getElementById("skill");
 
       const scrollPosition = window.scrollY;
@@ -46,7 +46,8 @@ const Menu = () => {
         });
       } else if (
         projectElement &&
-        scrollPosition >= projectElement.offsetTop / 1.2
+        scrollPosition >= projectElement.offsetTop / 1.2 &&
+        scrollPosition < contactElement.offsetTop / 1.2
       ) {
         setActive({
           home: false,
@@ -54,15 +55,17 @@ const Menu = () => {
           contact: false,
           skill: false,
         });
+      } else if (
+        contactElement &&
+        scrollPosition >= contactElement.offsetTop / 1.2
+      ) {
+        setActive({
+          home: false,
+          project: false,
+          contact: true,
+          skill: false,
+        });
       }
-      // else if(contactElement && scrollPosition >= contactElement.offsetTop){
-      //   setActive({
-      //     home: false,
-      //     project: true,
-      //     contact: false,
-      //     skill:false,
-      //   });
-      // }
     };
 
     window.addEventListener("scroll", handleScroll);

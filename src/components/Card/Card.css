@@ -1,7 +1,7 @@
 .card {
   box-sizing: border-box;
-  width: 300px;
-  height: 250px;
+  width: 250px;
+  height: 230px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(26, 25, 25, 0.788);
@@ -16,12 +16,21 @@
     border-top-right-radius: 10px;
     outline: 1px solid white;
   }
+  & a {
+    text-decoration: none;
+    color: white;
+    mix-blend-mode: difference;
+  }
 }
 @media (prefers-color-scheme: light) {
   .card {
     box-shadow: 2px 2px 5px #f4f4f4;
     &.box_Shadow {
       box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #f4f4f4;
+    }
+    & a {
+      text-decoration: none;
+      color: #222;
     }
   }
 }

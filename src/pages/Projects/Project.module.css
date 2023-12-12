@@ -1,22 +1,22 @@
 .project {
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
+  justify-content: center;
   & > div {
     min-width: 300px;
-    flex: 1 0 0;
+    /* border: 1px solid white; */
   }
   & .project_container {
-    min-width: 300px;
+    flex: 1 0 0;
     padding: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   & .project_preview {
+    flex: 2 1 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
