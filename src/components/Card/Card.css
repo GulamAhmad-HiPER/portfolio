@@ -17,3 +17,11 @@
     outline: 1px solid white;
   }
 }
+@media (prefers-color-scheme: light) {
+  .card {
+    box-shadow: 2px 2px 5px #f4f4f4;
+    &.box_Shadow {
+      box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #f4f4f4;
+    }
+  }
+}

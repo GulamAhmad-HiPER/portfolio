@@ -24,8 +24,12 @@ const Projects = () => {
         <h1 className="primary-fs">
           <Imganimation text="My Work" singleline={true} speed={30} />
         </h1>
-        <ul>
-          <li onMouseEnter={() => handleHover(0)} onMouseLeave={handleLeave}>
+        <ul className={style.project_list}>
+          <li
+            onMouseEnter={() => handleHover(0)}
+            onMouseLeave={handleLeave}
+            className={style.project_llistitems}
+          >
             <Imganimation
               text="Philomatheon classes"
               singleline={true}
@@ -33,7 +37,11 @@ const Projects = () => {
               hover={true}
             />
           </li>
-          <li onMouseEnter={() => handleHover(3)} onMouseLeave={handleLeave}>
+          <li
+            onMouseEnter={() => handleHover(3)}
+            onMouseLeave={handleLeave}
+            className={style.project_llistitems}
+          >
             <Imganimation
               text="Weather App"
               singleline={true}
@@ -41,7 +49,11 @@ const Projects = () => {
               hover={true}
             />
           </li>
-          <li onMouseEnter={() => handleHover(1)} onMouseLeave={handleLeave}>
+          <li
+            onMouseEnter={() => handleHover(1)}
+            onMouseLeave={handleLeave}
+            className={style.project_llistitems}
+          >
             <Imganimation
               text="HTML Editor"
               singleline={true}
@@ -49,7 +61,11 @@ const Projects = () => {
               hover={true}
             />
           </li>
-          <li onMouseEnter={() => handleHover(2)} onMouseLeave={handleLeave}>
+          <li
+            onMouseEnter={() => handleHover(2)}
+            onMouseLeave={handleLeave}
+            className={style.project_llistitems}
+          >
             <Imganimation
               text="Task Manager"
               singleline={true}

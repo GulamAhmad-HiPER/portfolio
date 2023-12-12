@@ -28,3 +28,18 @@
     }
   }
 }
+
+@media (prefers-color-scheme: light) {
+  .menu {
+    background-color: #e0e0e0;
+    box-shadow: 5px 5px 9px #cccccc, -5px -5px 9px #f4f4f4;
+    & ul {
+      & li {
+        &.active {
+          background: linear-gradient(145deg, #cacaca, #f0f0f0);
+          box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #f4f4f4;
+        }
+      }
+    }
+  }
+}

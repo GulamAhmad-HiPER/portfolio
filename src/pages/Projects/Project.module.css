@@ -15,25 +15,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    & ul {
-      list-style: none; /* Remove default list styles */
-      padding: 0; /* Remove default padding */
-
-      & li {
-        margin-bottom: 2rem;
-        transition: 0.4s ease;
-        &:hover {
-          scale: 1.5;
-        }
-        &::before {
-          content: "> "; /* Set the content of the ::before pseudo-element */
-          color: #eee; /* Set the color of the custom character */
-          font-weight: bold; /* Adjust font-weight if needed */
-          display: inline-block; /* Ensure the custom character is displayed inline with the list item content */
-          margin-right: 5px; /* Adjust the spacing between the custom character and the list item content */
-        }
-      }
-    }
   }
   & .project_preview {
     display: flex;
@@ -41,5 +22,34 @@
     justify-content: center;
     align-content: center;
     gap: 20px;
+  }
+}
+
+.project_list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+
+  & .project_llistitems {
+    margin-bottom: 2rem;
+    transition: 0.4s ease;
+    &:hover {
+      scale: 1.5;
+    }
+    &::before {
+      content: "> "; /* Set the content of the ::before pseudo-element */
+      color: #eee; /* Set the color of the custom character */
+      font-weight: bold; /* Adjust font-weight if needed */
+      display: inline-block; /* Ensure the custom character is displayed inline with the list item content */
+      margin-right: 5px; /* Adjust the spacing between the custom character and the list item content */
+    }
+  }
+}
+@media (prefers-color-scheme: light) {
+  .project_list {
+    & .project_llistitems {
+      &::before {
+        color: #242424;
+      }
+    }
   }
 }
