@@ -1,6 +1,8 @@
 import Clock from "../../components/Clock/Clock";
 import Imganimation from "../../components/Imganimation/Imganimation";
 import style from "./Home.module.css";
+import Resume from "../../assets/Ahmad Resume.pdf";
+
 const Home = () => {
   return (
     <section id="home" className={style.container}>
@@ -19,8 +21,10 @@ const Home = () => {
         </p>
 
         <div className={style.btn}>
-          <button>Projects</button>
-          <button>Resume</button>
+          <a href="#project">Projects</a>
+          <a href={Resume} download>
+            Resume
+          </a>
         </div>
       </div>
       <div className={style.circle}>

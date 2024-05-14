@@ -2,6 +2,7 @@ import style from "./Contact.module.css";
 import Imganimation from "../../components/Imganimation/Imganimation";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 
 const Contact = () => {
@@ -22,6 +23,9 @@ const Contact = () => {
           </a>
           <a href="https://gmail.com">
             <BiLogoGmail />
+          </a>
+          <a href="https://www.linkedin.com/in/gulam-ahmad-siddique-06703120b/">
+            <FaLinkedin />
           </a>
         </div>
       </div>

@@ -28,9 +28,5 @@
     &.box_Shadow {
       box-shadow: 5px 5px 10px #cccccc, -5px -5px 10px #f4f4f4;
     }
-    & a {
-      text-decoration: none;
-      color: #222;
-    }
   }
 }

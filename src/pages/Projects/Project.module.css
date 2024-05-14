@@ -6,7 +6,6 @@
   justify-content: center;
   & > div {
     min-width: 300px;
-    /* border: 1px solid white; */
   }
   & .project_container {
     flex: 1 0 0;
@@ -14,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   & .project_preview {
     flex: 2 1 0;
@@ -42,6 +42,11 @@
       display: inline-block; /* Ensure the custom character is displayed inline with the list item content */
       margin-right: 5px; /* Adjust the spacing between the custom character and the list item content */
     }
+  }
+}
+@media (min-width: 780px) {
+  .project {
+    height: 100%;
   }
 }
 @media (prefers-color-scheme: light) {

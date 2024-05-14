@@ -25,6 +25,21 @@
   & .btn {
     display: flex;
     gap: 10px;
+    & > a {
+      padding: 8px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      border-radius: 30px;
+      background-color: #242424;
+      box-shadow: 5px 5px 9px #181818, -5px -5px 9px #2c2c2c;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        background: #f9f9f9;
+        color: black;
+        border-color: white;
+      }
+    }
   }
 }
 

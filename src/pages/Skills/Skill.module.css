@@ -18,7 +18,7 @@
 }
 .skill_view {
   /* margin-left: 10px; */
-  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
