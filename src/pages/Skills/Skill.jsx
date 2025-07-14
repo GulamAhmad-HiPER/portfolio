@@ -21,20 +21,33 @@ const Skill = () => {
             />
           </h1>
           <p>
-            Frontend Developer @HiPER Automotive as a Intern (4 Months)
+            Frontend Developer @HiPER Automotive (Jan-24)
             <br />
             <br />
-            Main area of experties is Frontend Development.
+            My main area of expertise is frontend development, where I’ve worked
+            extensively with React, TypeScript, Tailwind CSS, and Material UI to
+            build responsive and scalable web applications.
             <br />
             <br />
-            Building small and medium webapps using React Js, Material UI
-            Tailwind, custom layouts and other featuers.
+            I’ve integrated both internal and third-party APIs, including
+            OpenWeatherMap, Firebase Auth, and location-based services, handling
+            authentication, data visualization, and dynamic dashboard
+            interactions.
             <br />
             <br />
-            Containerizing Webapp Using Docker for faster deployment
+            I containerized internal web apps using Docker, which significantly
+            improved the deployment process and reduced delivery time by over
+            20%.
             <br />
-            <br />I have also Full Stack developer experience with my one
-            freelance project.
+            <br />
+            I also have experience deploying applications on AWS—using S3 for
+            static hosting and CloudFront for global content delivery—ensuring
+            high performance and availability.
+            <br />
+            <br />
+            In addition, I have full-stack development experience through
+            freelance work, where I built complete solutions using Node.js,
+            Express, and MySQL alongside the frontend.
           </p>
         </div>
       </div>
